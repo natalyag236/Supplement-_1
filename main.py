@@ -27,13 +27,25 @@ def test_return_lenght_five_for_hello():
     assert count("hello") == 5
 
 def upsert(dictionary, key , value):
+    """ Inserts or updates a key value in a dicrionary
+
+   
+
+    Args:
+        dictionary: the dictionary to pefroms the upsert .
+        key: the key insert in the dictionary 
+        value: the value add to existing value
+
+    Returns:
+       int: the numenr of key value pairs in the dictionary after the operation
+    """
     if key in dictionary.keys():
         # dictionary contains key, update
         dictionary[key] = dictionary[key] + value
     else:
         # dictionary does not contain key, set
         dictionary[key] = value
-        
+
 def test_should_insert_new_key():
     dictionary = {}
     key = "test"
