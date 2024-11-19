@@ -25,3 +25,9 @@ def count(string):
 
 def test_return_lenght_five_for_hello():
     assert count("hello") == 5
+
+def test_should_insert_new_key():
+    dictionary = {}
+    key = "test"
+    upsert(dictionary , key, 5)
+    assert dictionary[key ] == 5
