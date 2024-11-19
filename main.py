@@ -31,3 +31,10 @@ def test_should_insert_new_key():
     key = "test"
     upsert(dictionary , key, 5)
     assert dictionary[key ] == 5
+    
+def test_should_append_new_key():
+    dictionary = {}
+    key = "test"
+    upsert(dictionary , key, 5)
+    upsert(dictionary , key, 2)
+    assert dictionary[key ] == 7
