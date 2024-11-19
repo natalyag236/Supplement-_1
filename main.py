@@ -12,6 +12,9 @@ def add(num1, num2):
 
 def test_return_four_for_two_and_two():
     assert add(2, 2) == 4
-  
+
+def count(string):
+    return len(string)
+    
 def test_return_lenght_five_for_hello():
     assert count("hello") == 5
